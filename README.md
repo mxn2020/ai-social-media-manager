@@ -1,71 +1,94 @@
 # AI PR & Social Media Manager
 
-## Pages & Features
+AI-managed PR and social media posting with analytics.
 
-### 1. Dashboard
-- Social account performance overview (followers, engagement rate)
-- Scheduled posts queue
-- Trending topics & hashtags relevant to brand
-- Recent mentions & sentiment summary
-- Content calendar preview
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Content Planner
-- Drag-and-drop content calendar (day / week / month)
-- AI content idea generator based on trends & brand
-- Post scheduling across platforms (Instagram, X, LinkedIn, Facebook, TikTok)
-- Bulk schedule & auto-publish
-- Recurring post series
+## Tech Stack
 
-### 3. AI Copywriter
-- Generate captions, headlines & CTAs from brief
-- Tone selector (professional, witty, inspirational, casual)
-- Hashtag suggestions & optimization
-- Multi-language copy generation
-- A/B copy variant generation
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Visual Content Studio
-- AI-generated images for social posts
-- Template library (stories, reels, carousels, covers)
-- Brand kit application (colors, fonts, logo)
-- Resize for different platform dimensions
+## Getting Started
 
-### 5. Social Inbox
-- Unified inbox for comments, DMs & mentions
-- AI-suggested replies
-- Sentiment tagging per message
-- Priority flagging & assignment
-- Response time tracking
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Brand Monitoring
-- Real-time mention tracking across web & social
-- Sentiment analysis per mention
-- Competitor comparison dashboard
-- Alert rules for negative mentions or spikes
+## License
 
-### 7. PR & Press
-- AI press release generator
-- Media contact database & outreach
-- Press coverage tracker
-- AI blog post & article writer
-- Brand story & narrative builder
+MIT © Mehdi Nabhani
 
-### 8. Influencer Management
-- Influencer discovery & matching
-- Campaign brief generator
-- Performance tracking per influencer
-- Contract & deliverable management
+---
 
-### 9. Analytics & Reports
-- Per-platform performance metrics
-- Post-level engagement analysis
-- Audience demographics & growth trends
-- Best posting time analysis
-- ROI tracking per campaign
-- Export as PDF / CSV
+<details>
+<summary>📋 Original Feature Spec</summary>
 
-### 10. Settings
-- Social account connections
-- Approval workflows (draft → review → publish)
-- Brand voice guidelines
-- Team roles & permissions
-- Notification preferences
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
